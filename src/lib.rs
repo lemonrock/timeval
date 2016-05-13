@@ -66,7 +66,7 @@ pub fn to_nanoseconds(value: timeval) -> UnsignedNanosecond
 	value.tv_sec as u64 * 1_000_000_000 + ((value.tv_usec as u64) * 1_000) as UnsignedNanosecond
 }
 
-pub fn difference_microseconds(left: timeval, right: timeval) -> SignedMicrosecond
+pub fn difference_in_microseconds(left: timeval, right: timeval) -> SignedMicrosecond
 {
 	let left_microseconds = to_microseconds(left) as SignedMicrosecond;
 	let right_microseconds = to_microseconds(right) as SignedMicrosecond;
